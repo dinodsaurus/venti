@@ -1,0 +1,37 @@
+<div class="list">
+    <div class="row listHead">
+        <div class="col-sm-1">
+            <p>Broj</p>
+        </div>
+        <div class="col-sm-2">
+            <p>Datum</p>
+        </div>
+        <div class="col-sm-7">
+            <p>Naručitelj</p>
+        </div>
+        <div class="col-sm-2">
+            <p>Predstavnik</p>
+        </div>
+    </div>
+    <div class="row item" ng-repeat="order  in orders | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" ng-click="singleView(order._id)">
+        <div class="col-sm-1 cen">
+            <p>{{order._id}}</p>
+        </div>
+        <div class="col-sm-2 cen">
+            <p>{{order.datum | date: "dd.MM.yyyy"}}</p>
+        </div>
+        <div class="col-sm-7">
+            <p>{{order.narucitelj}}</p>
+        </div>
+        <div class="col-sm-2 cen">
+            <p>{{order.predstavnik}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="pagination">
+            <span ng-repeat="n in [] | range: pagination.numPages">
+            <button ng-click="pagination.toPageId(n)" ng-class="{current: n == pagination.page}">{{n + 1}}</button>
+        </span>
+        </div>
+    </div>
+</div>

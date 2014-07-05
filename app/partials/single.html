@@ -1,0 +1,21 @@
+<div class="row single">
+    <div class="col-xs-12">
+        <p><span>Izvještaj o radu:</span> {{order.datum | date: "yyyy"}}. / BR. {{order.datum | date: "yyyy"}}-{{order._id}}</p>
+        <p><span>Naručitelj:</span> {{order.narucitelj}}</p>
+        <p><span>Predstavnik:</span> {{order.predstavnik}}</p>
+        <p><span>Telefon:</span> {{order.telefon}} </p>
+        <p id='napomena'><span>Napomena:</span> {{order.napomena}}</p>
+        <div class="bor"><div class="in"></div></div>
+        <p><span>Fakturiranje iz :</span> Venti d.o.o. </p>
+        <p><span>Adresa:</span> {{order.adresa}}</p>
+        <p><span>Posao obavljan od:</span> {{order.datumOd | date: "dd.MM.yyyy"}} <span>  do: </span>{{order.datumDo | date: "dd.MM.yyyy"}}</p>
+        <p>U Varaždinu, {{order.datum | date: "dd.MM.yyyy"    }}</p>
+    </div>
+    <div class="col-xs-12">
+        <ul>
+            <a ng-click="reuse(order._id)"><li><i class="fa fa-files-o"></i> Koristi</li></a>
+            <li><i class="fa fa-pencil"></i> Editiraj</li>
+            <li ng-click="downloadFile()"><i class="fa fa-download"></i> Preuzmi</li>
+        </ul>
+    </div>
+</div>

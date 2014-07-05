@@ -1,0 +1,57 @@
+<div class="row new">
+    <div class="col-sm-12">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="datum" class="col-sm-2 control-label">Datum</label>
+                <div class="col-sm-4">
+                    <input type="text" ui-date="dateOptions" class="form-control" id="datum" placeholder="Datum" ng-model="item.datum">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="narucitelj" class="col-sm-2 control-label">Naručitelj</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="narucitelj" placeholder="Naručitelj" ng-model="item.narucitelj">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adresa" class="col-sm-2 control-label">Adresa</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="adresa" placeholder="Adresa" ng-model="item.adresa">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="datumod" class="col-sm-2 control-label">Datum izvođenja: Od</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="datumod" ui-date="dateOptions" placeholder="Od dana" ng-model="item.datumOd">
+                </div>
+                <label for="datumdo" class="col-sm-1 control-label">Do</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="datumdo" ui-date="dateOptions" placeholder="Do dana" ng-model="item.datumDo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="predstavnik" class="col-sm-2 control-label">Predstavnik</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="predstavnik" placeholder="Predstavnik" ng-model="item.predstavnik">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telefon" class="col-sm-2 control-label">Telefon</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="telefon" placeholder="Telefon" ng-model="item.telefon">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="napomena" class="col-sm-2 control-label">Napomena</label>
+                <div class="col-sm-9">
+                    <textarea id="napomena" class="form-control" rows="5" ng-model="item.napomena"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <button type="submit" class="btn btn-default" ng-click="save()">Pošalji</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
