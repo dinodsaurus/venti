@@ -15,7 +15,6 @@ angular.module('venti')
                 data.datum = new Date(data.datum);
                 data.datumOd = new Date(data.datumOd);
                 data.datumDo = new Date(data.datumDo);
-                $log.info(data);
                 $scope.item = data;
             });
         }

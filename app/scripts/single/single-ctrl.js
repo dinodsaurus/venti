@@ -15,6 +15,19 @@ angular.module('venti')
         $scope.reuse = function (id) {
             $location.path("new/" + id);
         }
+        $scope.edit = function (val) {
+            $scope.helper.edit = val;
+            $scope.order.datum = new Date($scope.order.datum);
+            $scope.order.datumOd = new Date($scope.order.datumOd);
+            $scope.order.datumDo = new Date($scope.order.datumDo);
+        }
+        $scope.dateOptions = {
+            changeYear: true,
+            changeMonth: true,
+            yearRange: '2000:-0',
+            showAnim: "fadeIn",
+            dateFormat: 'dd.mm.yy'
+        };
         $scope.downloadFile = function () {
             var docDefinition = {
                 content: [

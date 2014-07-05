@@ -1,21 +1,47 @@
 <div class="row single">
     <div class="col-xs-12">
         <p><span>Izvještaj o radu:</span> {{order.datum | date: "yyyy"}}. / BR. {{order.datum | date: "yyyy"}}-{{order._id}}</p>
-        <p><span>Naručitelj:</span> {{order.narucitelj}}</p>
-        <p><span>Predstavnik:</span> {{order.predstavnik}}</p>
-        <p><span>Telefon:</span> {{order.telefon}} </p>
+        <p>
+            Naručitelj:
+            <input ng-if="helper.edit" type="text" ng-model="order.narucitelj"/>
+            <span ng-if="!helper.edit">{{order.narucitelj}}</span></p>
+        <p>
+            Predstavnik:
+            <input ng-if="helper.edit" type="text" ng-model="order.predstavnik"/>
+            <span ng-if="!helper.edit">{{order.predstavnik}}</span></p>
+        <p>
+            Telefon:
+            <input ng-if="helper.edit" type="text" ng-model="order.telefon"/>
+            <span ng-if="!helper.edit">{{order.telefon}}</span></p>
         <p id='napomena'><span>Napomena:</span> {{order.napomena}}</p>
         <div class="bor"><div class="in"></div></div>
-        <p><span>Fakturiranje iz :</span> Venti d.o.o. </p>
-        <p><span>Adresa:</span> {{order.adresa}}</p>
-        <p><span>Posao obavljan od:</span> {{order.datumOd | date: "dd.MM.yyyy"}} <span>  do: </span>{{order.datumDo | date: "dd.MM.yyyy"}}</p>
-        <p>U Varaždinu, {{order.datum | date: "dd.MM.yyyy"    }}</p>
+        <p>Fakturiranje iz : <span>Venti d.o.o.</span> </p>
+        <p>Adresa:
+            <input ng-if="helper.edit" type="text" ng-model="order.adresa"/>
+            <span ng-if="!helper.edit">{{order.adresa}}</span>
+        </p>
+        <p class="dates">Posao obavljan od:
+             <span ng-if="!helper.edit">{{order.datumOd | date: "dd.MM.yyyy"}}</span>
+            <input ui-date="dateOptions" ng-if="helper.edit" type="text" ng-model="order.datumOd"/>
+            do:
+             <span ng-if="!helper.edit"> {{order.datumDo | date: "dd.MM.yyyy"}}</span>
+             <input ui-date="dateOptions" ng-if="helper.edit" type="text" ng-model="order.datumDo"/>
+        </p>
+        <p>U Varaždinu,
+            <input ui-date="dateOptions" ng-if="helper.edit" type="text" ng-model="order.datum"/>
+            <span ng-if="!helper.edit">{{order.datum | date: "dd.MM.yyyy"}}</span>
+        </p>
     </div>
-    <div class="col-xs-12">
+    <div class="col-xs-12" ng-if="!helper.edit">
         <ul>
-            <a ng-click="reuse(order._id)"><li><i class="fa fa-files-o"></i> Koristi</li></a>
-            <li><i class="fa fa-pencil"></i> Editiraj</li>
+            <li ng-click="reuse(order._id)"><i class="fa fa-files-o"></i> Koristi</li>
+            <li ng-click="edit(true)"><i class="fa fa-pencil"></i> Editiraj</li>
             <li ng-click="downloadFile()"><i class="fa fa-download"></i> Preuzmi</li>
+        </ul>
+    </div>
+    <div class="col-xs-12" ng-if="helper.edit">
+        <ul>
+            <li ng-click="edit(false)"><i class="fa fa-floppy-o"></i> Pospremi</li>
         </ul>
     </div>
 </div>
