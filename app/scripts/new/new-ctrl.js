@@ -21,8 +21,8 @@ angular.module('venti')
         $scope.save = function () {
             OrdersFactory.saveOrder($scope.item).then(function (data) {
                 $location.path("/orders");
-            })
-        }
+            });
+        };
         $scope.dateOptions = {
             changeYear: true,
             changeMonth: true,

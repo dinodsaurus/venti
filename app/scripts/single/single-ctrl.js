@@ -29,6 +29,10 @@ angular.module('venti')
             dateFormat: 'dd.mm.yy'
         };
         $scope.downloadFile = function () {
+            var date = new Date($scope.order.datum),
+                datumod = new Date($scope.order.datumOd),
+                datumdo = new Date($scope.order.datumDo);
+            console.log(date.getFullYear());
             var docDefinition = {
                 content: [
                     {
@@ -39,7 +43,7 @@ angular.module('venti')
                         columns: [
                             {
                                 width: 320,
-                                stack: ['Izvještaj o radu',"GODINA 2014. / BR. 2014-193"],
+                                stack: ['Izvještaj o radu',"GODINA" + date.getFullYear() +  ". / BR. " + date.getFullYear() + "-" + $scope.order._id ],
                                 style: 'headFont'
                             },
                             {
@@ -51,10 +55,16 @@ angular.module('venti')
                     },
                     { text: '', style: 'subHead',margin: [ 0, 20, 0, 0 ]},
                     { text: 'NARUČITELJ', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
-                    { text: 'ZTB STAN D.o.o., A.Opolski 2, Varaždin, OIB: 06835775619 ( Upravitelj) I Suvlasnici Stambene Zgrade U Varaždinu U Ul. S. Vukovića 6 ( Naručitelj)', style: 'paragraph' },
-                    { text: 'NARUČITELJ', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
-                    { text: 'ZTB STAN D.o.o., A.Opolski 2, Varaždin, OIB: 06835775619 ( Upravitelj) I Suvlasnici Stambene Zgrade U Varaždinu U Ul. S. Vukovića 6 ( Naručitelj)', style: 'paragraph' },
-
+                    { text: $scope.order.narucitelj, style: 'paragraph' },
+                    { text: 'Adresa', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
+                    { text: $scope.order.adresa, style: 'paragraph' },
+                    { text: 'Izvođeno od ' + datumod.getDate() + "." + datumod.getMonth() + "." + datumdo.getFullYear() + ". do " + datumod.getDate() + "." + datumod.getMonth() + "." + datumod.getFullYear() + "." , style: 'subHead',margin: [ 0, 10, 0, 0 ]},
+                    { text: 'Predstavnik', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
+                    { text: $scope.order.predstavnik, style: 'paragraph' },
+                    { text: 'Telefon', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
+                    { text: $scope.order.telefon, style: 'paragraph' },
+                    { text: 'Napomena', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
+                    { text: $scope.order.napomena, style: 'paragraph' },
                 ],
 
                 styles: {

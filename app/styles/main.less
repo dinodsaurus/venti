@@ -55,6 +55,7 @@ body{
 a{
   color:#fff000;
   text-decoration:none;
+  .transition(all .2s);
 }
 a:hover{
   text-decoration:none;
@@ -129,10 +130,17 @@ a:hover{
     color:@yellow;
   }
 }
+li{
+  .transition(background .2s);
+}
 .list{
   margin-top:10px;
   .item{
     cursor:pointer;
+    .transition(all .2s);
+    &:hover{
+      background:#4C4E50;
+    }
   }
   .row{
     padding:10px 0;

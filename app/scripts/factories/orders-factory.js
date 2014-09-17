@@ -1,7 +1,7 @@
 'use strict';
 angular.module('venti')
     .factory("OrdersFactory", function ($http, $q) {
-        var ORDER_API = "http://localhost:8080/api/order";
+        var ORDER_API = "/api/order";
         return {
             saveOrder: function (item) {
                 var deferred = $q.defer();

@@ -13,7 +13,7 @@
             <p>Predstavnik</p>
         </div>
     </div>
-    <div class="row item" ng-repeat="order  in orders | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" ng-click="singleView(order._id)">
+    <div class="row item" ng-repeat="order  in orders | filter:helper.search" ng-click="singleView(order._id)">
         <div class="col-sm-1 cen">
             <p>{{order._id}}</p>
         </div>
@@ -27,11 +27,11 @@
             <p>{{order.predstavnik}}</p>
         </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="pagination">
             <span ng-repeat="n in [] | range: pagination.numPages">
             <button ng-click="pagination.toPageId(n)" ng-class="{current: n == pagination.page}">{{n + 1}}</button>
         </span>
         </div>
-    </div>
+    </div> -->
 </div>
