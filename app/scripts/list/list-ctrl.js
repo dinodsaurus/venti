@@ -8,6 +8,7 @@ angular.module('venti')
         }
         $scope.helper.list = true;
         OrdersFactory.getAllOrders().then(function (data) {
+            $log.info(data);
             $scope.orders = data;
             $scope.pagination = Pagination.getNew(5);
             $scope.pagination.numPages = Math.ceil($scope.orders.length/$scope.pagination.perPage);

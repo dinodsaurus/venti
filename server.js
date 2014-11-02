@@ -1,7 +1,6 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    cors = require('cors'),
     autoIncrement = require('mongoose-auto-increment'),
     moment = require('moment');
 
@@ -18,8 +17,6 @@ app.use(bodyParser());
 app.use(express.static(__dirname + '/public'));
 
 var router = express.Router();
-
-app.use(cors());
 
 router.route('/order')
     .post(function(req, res) {

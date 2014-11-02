@@ -35,7 +35,6 @@
     "require-dir": "~0.1.0",
     "browser-sync": "~0.9.1",
     "http-proxy": "~1.1.4",
-    "gulp-less": "^1.2.3",
-    "cors": "^2.3.2"
-  }
+    "gulp-less": "^1.2.3"
+    }
 }
