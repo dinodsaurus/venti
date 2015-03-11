@@ -13,7 +13,7 @@ export PATH=$PATH:$MONGO_PATH/bin
 
 #Instalacija projekta
 * Potrebno je isklonirat projekt `git clone git@github.com:dinodsaurus/venti.git`
-* Nakon kloniranja instaliramo sve projektne zavisnosti `npm install`
+* Nakon kloniranja instaliramo sve projektne zavisnosti `cd venti && npm install`
 * Potrebno je instalirat sve frontend zavisnosti`cd app && bower install`
 * Pokrenemo mongo bazu sa `mongod`
 * Unutar novog terminal prozora pokrenemo node server `cd .. && node server.js`
