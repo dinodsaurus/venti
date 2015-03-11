@@ -15,11 +15,9 @@ angular.module('venti')
 
                 UserFactory.user =  profile;
                 $scope.user = profile;
-                if(profile.id === "112378287782534858937"){
-                    $scope.$apply(function () {
-                        $location.path("/orders");
-                    })
-                }
+                $scope.$apply(function () {
+                    $location.path("/orders");
+                });
             }
 
         });
