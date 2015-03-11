@@ -1,3 +1,5 @@
+![Logo](screens/login.jpg)
+
 # Opis
 U ovom diplomskom radu cilj nam je prikazati drugačiji pristup razvoju web aplikacija. Većina sadašnjih web aplikacija oslanja se na LAMP arhitekturu same aplikacije. Slobodno možemo reći da je ovaj način razvijanja web aplikacija trenutno najrasprostranjeniji, no također postoje i druga rješenja. Jedno od njih prikazat ću u ovom diplomskom radu te ću povući kratku koleraciju između LAMP i MEAN web stack-a. Nakon toga ću pokušati opisati na kojem principu rade nerelacijske baze te ih usporediti s relacijskim bazama, zašto koristiti Node.js te koje su njegove prednosti i mane, što nam pruža Express.js i za što se uopće koristi. Naposljetku ćemo razmotriti koje su dobre i loše strane selidbe logike same aplikacije sa servera na klijenta, za to ćemo koristiti trenutno najrasprostranjeniji frontend framework, a to je Angular.js koji je razvijen od strane Google-a. Unutar naše frontend aplikacije prikazat ćemo komunikaciju između klijenta i servera pomoću REST-a. Pošto sve više aplikacija radi na asinkronom pristupu, REST dolazi kao odličan kanal za komunikaciju. Također nam REST pristup pruža vrlo jednostavnu integraciju s aplikacijama koje su podržane na više platformi tipa iOS, Android, Windows Phone itd.
 
@@ -26,3 +28,14 @@ export PATH=$PATH:$MONGO_PATH/bin
 * Svi modeli unutar baze podataka nalaze se unutar `models` foldera
 
 ###Happy coding!
+
+### Preview
+![Logo](screens/oAuth.jpg)
+
+![Logo](screens/list.jpg)
+
+![Logo](screens/single.jpg)
+
+![Logo](screens/new.jpg)
+
+![Logo](screens/pdf.jpg)
