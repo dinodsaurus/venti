@@ -14,6 +14,17 @@ angular.module('venti')
                     });
                 return deferred.promise;
             },
+            putOrder: function (item) {
+                var deferred = $q.defer();
+                $http({method: 'PUT', url: ORDER_API + "/" + item._id, data: item}).
+                    success(function(data) {
+                        deferred.resolve(data);
+                    }).
+                    error(function(data) {
+                        deferred.reject(data);
+                    });
+                return deferred.promise;
+            },
             getOrder: function(key) {
                 var deferred = $q.defer();
                 $http({method: 'GET', url: ORDER_API + "/" + key}).

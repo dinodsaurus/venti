@@ -11,7 +11,6 @@ angular.module('venti')
         var id = $routeParams.id;
         if(id){
             OrdersFactory.getOrder(id).then(function (data) {
-                $log.info(data);
                 data.datum = new Date(data.datum);
                 data.datumOd = new Date(data.datumOd);
                 data.datumDo = new Date(data.datumDo);
@@ -19,6 +18,7 @@ angular.module('venti')
             });
         }
         $scope.save = function () {
+            console.log($scope.item);
             OrdersFactory.saveOrder($scope.item).then(function (data) {
                 $location.path("/orders");
             });

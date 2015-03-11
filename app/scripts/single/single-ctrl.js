@@ -20,6 +20,11 @@ angular.module('venti')
             $scope.order.datum = new Date($scope.order.datum);
             $scope.order.datumOd = new Date($scope.order.datumOd);
             $scope.order.datumDo = new Date($scope.order.datumDo);
+
+            console.log($scope.order);
+            OrdersFactory.putOrder($scope.order).then(function (data) {
+                console.log(data);
+            });
         }
         $scope.dateOptions = {
             changeYear: true,
@@ -32,7 +37,6 @@ angular.module('venti')
             var date = new Date($scope.order.datum),
                 datumod = new Date($scope.order.datumOd),
                 datumdo = new Date($scope.order.datumDo);
-            console.log(date.getFullYear());
             var docDefinition = {
                 content: [
                     {
