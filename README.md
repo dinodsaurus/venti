@@ -28,6 +28,13 @@ export PATH=$PATH:$MONGO_PATH/bin
 * Čitava backend logika nalazi se unutar `server.js` file-a
 * Svi modeli unutar baze podataka nalaze se unutar `models` foldera
 
+# Korištene tehnologije
+* Autorizacija pomoću [Google oAuth](https://developers.google.com/accounts/docs/OAuth2)
+* Generiranje [PDF](https://github.com/bpampuch/pdfmake) datoteka unutar preglednika
+* Frontend [AngularJS](https://angular.io/) aplikacija
+* Backend [ExpressJS](http://expressjs.com/) aplikacija
+*  [MongoDB](https://www.mongodb.org/) baza podataka
+
 ###Happy coding!
 
 ### Preview
