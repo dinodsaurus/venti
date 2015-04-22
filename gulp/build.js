@@ -9,7 +9,7 @@ gulp.task('styles', function () {
   return gulp.src('app/styles/main.less')
     .pipe(less())
     .pipe($.autoprefixer('last 1 version'))
-    .pipe(gulp.dest('.tmp/styles'))
+    .pipe(gulp.dest('app/styles'))
     .pipe($.size());
 });
 

@@ -1,13 +1,14 @@
-'use strict';
+"use strict";
 
-angular.module('venti')
-    .controller('NewCtrl', function ($scope, $log, UserFactory, OrdersFactory, $location, $routeParams) {
+angular.module("venti")
+    .controller("NewCtrl", function ($scope, $log, UserFactory, OrdersFactory, $location, $routeParams) {
         if(!UserFactory.user.displayName){
             $location.path("/");
             return;
         }
         $scope.helper.list = false;
         $scope.item = {};
+        $scope.item.datum = new Date();
         var id = $routeParams.id;
         if(id){
             OrdersFactory.getOrder(id).then(function (data) {
@@ -19,15 +20,15 @@ angular.module('venti')
         }
         $scope.save = function () {
             console.log($scope.item);
-            OrdersFactory.saveOrder($scope.item).then(function (data) {
+            OrdersFactory.saveOrder($scope.item).then(function () {
                 $location.path("/orders");
             });
         };
         $scope.dateOptions = {
             changeYear: true,
             changeMonth: true,
-            yearRange: '2000:-0',
+            yearRange: "2000:-0",
             showAnim: "fadeIn",
-            dateFormat: 'dd.mm.yy'
+            dateFormat: "dd.mm.yy"
         };
     });

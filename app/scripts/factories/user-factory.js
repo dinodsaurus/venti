@@ -1,5 +1,5 @@
-'use strict';
-angular.module('venti')
+"use strict";
+angular.module("venti")
     .factory("UserFactory", function () {
         var user = {};
         return {

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-angular.module('venti')
-    .controller('ListCtrl', function ($scope, $log, UserFactory, $location, OrdersFactory, Pagination) {
+angular.module("venti")
+    .controller("ListCtrl", function ($scope, $log, UserFactory, $location, OrdersFactory, Pagination) {
         if(!UserFactory.user.displayName){
             $location.path("/");
             return;
@@ -15,5 +15,5 @@ angular.module('venti')
         });
         $scope.singleView = function (id) {
             $location.path("/order/" + id);
-        }
+        };
     });
