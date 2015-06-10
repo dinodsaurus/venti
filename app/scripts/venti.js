@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('venti', ['templates','ngAnimate', 'ngTouch', 'ngRoute','directive.g+signin','simplePagination','ui.date'])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist(["self", "http://admin.venti.hr/**"]);
+
     $routeProvider
       .when('/', {
         templateUrl: 'login.html'

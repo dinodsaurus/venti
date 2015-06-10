@@ -3,7 +3,8 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     mongoose = require("mongoose"),
     autoIncrement = require("mongoose-auto-increment"),
-    moment = require("moment");
+    moment = require("moment"),
+    cors = require("cors");
 
 var connection = mongoose.connect("mongodb://localhost/ventiDb");
 autoIncrement.initialize(connection);
@@ -14,6 +15,8 @@ var app = express();
 
 var port = process.env.PORT || 8080;
 
+
+app.use(cors());
 app.use(bodyParser());
 app.use(express.static(__dirname + "/public"));
 
