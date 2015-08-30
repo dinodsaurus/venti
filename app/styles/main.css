@@ -5921,6 +5921,12 @@ a:hover {
   width: 181px;
   margin: 30px auto;
 }
+#login .btn {
+  width: 185px;
+  background: #fff000;
+  display: block;
+  color: #464749;
+}
 .welcome .logo {
   width: 155px;
 }

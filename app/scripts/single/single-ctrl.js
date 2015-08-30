@@ -36,7 +36,9 @@ angular.module('venti')
         $scope.downloadFile = function () {
             var date = new Date($scope.order.datum),
                 datumod = new Date($scope.order.datumOd),
-                datumdo = new Date($scope.order.datumDo);
+                datumdo = new Date($scope.order.datumDo),
+                datumodmj = parseInt(datumod.getMonth(), 10) + 1,
+                datumdomj = parseInt(datumdo.getMonth(), 10) + 1;
             var docDefinition = {
                 content: [
                     {
@@ -62,7 +64,7 @@ angular.module('venti')
                     { text: $scope.order.narucitelj, style: 'paragraph' },
                     { text: 'Adresa', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
                     { text: $scope.order.adresa, style: 'paragraph' },
-                    { text: 'Izvođeno od ' + datumod.getDate() + "." + datumod.getMonth() + "." + datumdo.getFullYear() + ". do " + datumod.getDate() + "." + datumod.getMonth() + "." + datumod.getFullYear() + "." , style: 'subHead',margin: [ 0, 10, 0, 0 ]},
+                    { text: 'Izvođeno od ' + datumod.getDate() + "." + datumodmj + "." + datumdo.getFullYear() + ". do " + datumdo.getDate() + "." + datumdomj + "." + datumdo.getFullYear() + "." , style: 'subHead',margin: [ 0, 10, 0, 0 ]},
                     { text: 'Predstavnik', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
                     { text: $scope.order.predstavnik, style: 'paragraph' },
                     { text: 'Telefon', style: 'subHead',margin: [ 0, 10, 0, 0 ]},
