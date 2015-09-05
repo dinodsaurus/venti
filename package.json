@@ -41,5 +41,8 @@
     "mongoose-auto-increment": "4.0.0",
     "require-dir": "~0.1.0",
     "wiredep": "^1.4.3"
+  },
+  "scripts":{
+    "test": "gulp test"
   }
 }

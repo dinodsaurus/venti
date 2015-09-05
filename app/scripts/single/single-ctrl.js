@@ -2,30 +2,11 @@
 
 angular.module('venti')
     .controller('SingleCtrl', function ($scope, $log, $routeParams, OrdersFactory, UserFactory, $location) {
-        if(!UserFactory.user.displayName){
-            $location.path("/");
-            return;
+        var id = $routeParams.id;
+        if(!$scope.helper){
+          $scope.helper = {};
         }
         $scope.helper.list = false;
-
-        var id = $routeParams.id;
-        OrdersFactory.getOrder(id).then(function (data) {
-            $scope.order = data;
-        });
-        $scope.reuse = function (id) {
-            $location.path("new/" + id);
-        }
-        $scope.edit = function (val) {
-            $scope.helper.edit = val;
-            $scope.order.datum = new Date($scope.order.datum);
-            $scope.order.datumOd = new Date($scope.order.datumOd);
-            $scope.order.datumDo = new Date($scope.order.datumDo);
-
-            console.log($scope.order);
-            OrdersFactory.putOrder($scope.order).then(function (data) {
-                console.log(data);
-            });
-        }
         $scope.dateOptions = {
             changeYear: true,
             changeMonth: true,
@@ -33,6 +14,28 @@ angular.module('venti')
             showAnim: "fadeIn",
             dateFormat: 'dd.mm.yy'
         };
+        $scope.order = {};
+
+        OrdersFactory.getOrder(id).then(function (data) {
+            $scope.order = data;
+        });
+
+
+        $scope.reuse = function (id) {
+            $location.path("new/" + id);
+        }
+
+        $scope.edit = function (val) {
+            $scope.helper.edit = val;
+            $scope.order.datum = new Date($scope.order.datum);
+            $scope.order.datumOd = new Date($scope.order.datumOd);
+            $scope.order.datumDo = new Date($scope.order.datumDo);
+
+            OrdersFactory.putOrder($scope.order).then(function (data) {
+                console.log(data);
+            });
+        }
+
         $scope.downloadFile = function () {
             var date = new Date($scope.order.datum),
                 datumod = new Date($scope.order.datumOd),
