@@ -5890,8 +5890,44 @@ table {
 }
 /*GOTOV RESET POCETAK !!!*/
 body {
-  background: #888;
+  background: white;
   font-family: helvetica,arial;
+}
+.top {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  margin-left: -42px;
+  width: 84px;
+  height: 57px;
+  background: url("../images/top.png");
+}
+.bottom {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  margin-left: -45px;
+  width: 89px;
+  height: 60px;
+  background: url("../images/bottom.png");
+}
+.left {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  margin-top: -18px;
+  width: 46px;
+  height: 37px;
+  background: url("../images/left.png");
+}
+.right {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  margin-top: -13px;
+  width: 43px;
+  height: 27px;
+  background: url("../images/right.png");
 }
 a {
   color: #fff000;
@@ -5903,7 +5939,7 @@ a:hover {
 }
 .container {
   padding: 20px 15px;
-  background: #464749;
+  background: #efefef;
   color: white;
   -webkit-border-radius: 10px;
   -webkit-background-clip: padding-box;
@@ -5915,7 +5951,7 @@ a:hover {
 #login img {
   display: block;
   width: 50%;
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 #login .login {
   width: 181px;
@@ -5923,15 +5959,16 @@ a:hover {
 }
 #login .btn {
   width: 185px;
-  background: #fff000;
+  background: #cc0000;
   display: block;
-  color: #464749;
+  color: #efefef;
 }
 .welcome .logo {
-  width: 155px;
+  margin-left: -124px;
+  width: 400px;
 }
 .welcome .img {
-  margin-top: 6px;
+  margin-top: 36px;
   margin-left: 6px;
 }
 .welcome .img img {
@@ -5947,6 +5984,7 @@ a:hover {
 }
 .welcome .img h3 {
   line-height: 38px;
+  color: #666;
 }
 .nav .navi {
   width: 100%;
@@ -5957,23 +5995,24 @@ a:hover {
 .nav ul a {
   float: left;
   padding: 10px 5px;
+  margin-left: 5px;
+  color: #cc0000;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
   -moz-background-clip: padding;
   border-radius: 5px;
   background-clip: padding-box;
-  margin-left: 5px;
 }
 .nav ul a:focus {
-  background: #fff000;
+  background: #cc0000;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .nav ul a:hover {
   display: block;
-  color: black;
-  background: #fff000;
+  color: white;
+  background: #cc0000;
 }
 .search {
   float: right;
@@ -5992,7 +6031,7 @@ a:hover {
 }
 .listHead p {
   text-align: center;
-  color: #fff000;
+  color: #cc0000;
 }
 li {
   transition: background 0.2s;
@@ -6003,9 +6042,11 @@ li {
 .list .item {
   cursor: pointer;
   transition: all 0.2s;
+  color: #666;
 }
 .list .item:hover {
   background: #4C4E50;
+  color: white;
 }
 .list .row {
   padding: 10px 0;
@@ -6021,7 +6062,7 @@ li {
 }
 .list .row button {
   background: none;
-  color: #fff000;
+  color: #cc0000;
   border: none;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
@@ -6032,7 +6073,7 @@ li {
 }
 .list .row .current,
 .list .row button:hover {
-  background: #fff000;
+  background: #cc0000;
   color: black;
 }
 .list .pagination {
@@ -6046,10 +6087,10 @@ li {
   line-height: 24px;
   padding: 0 20px;
   margin-bottom: 10px;
-  color: #fff000;
+  color: #cc0000;
 }
 .single input {
-  color: #464749;
+  color: #666;
   border: none;
   background: #ccc;
   -webkit-border-radius: 5px;
@@ -6072,7 +6113,7 @@ li {
   background: #666;
 }
 .single span {
-  color: white;
+  color: #666;
 }
 .single ul {
   margin-top: 20px;
@@ -6089,31 +6130,31 @@ li {
   border-radius: 5px;
   background-clip: padding-box;
   margin-left: 5px;
-  border: 2px solid #fff000;
-  color: #fff000;
+  border: 2px solid #cc0000;
+  color: #cc0000;
   cursor: pointer;
 }
 .single ul li:hover {
   display: block;
   color: black;
-  background: #fff000;
+  background: #cc0000;
 }
 .new {
   padding: 50px 20px 20px 20px;
 }
 .new label {
-  color: #fff000;
+  color: #cc0000;
   font-size: 16px;
 }
 .new button {
   width: 100%;
-  border: 2px solid #fff000;
-  color: #fff000;
+  border: 2px solid #cc0000;
+  color: #cc0000;
   background: none;
   tex-align: left;
 }
 .new button:hover {
-  border: 2px solid #fff000;
-  background: #fff000;
+  border: 2px solid #cc0000;
+  background: #cc0000;
   color: black;
 }

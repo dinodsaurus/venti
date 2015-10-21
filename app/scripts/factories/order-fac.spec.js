@@ -1,6 +1,6 @@
 "use strict";
 
-describe("Order Service tests", function(){
+describe("Order", function(){
   var orders,
       http;
 
@@ -8,15 +8,15 @@ describe("Order Service tests", function(){
 
   beforeEach(module("venti"));
 
-  describe("Calendar tests", function () {
+  describe("Service tests", function () {
     beforeEach(inject(function(OrdersFactory, $httpBackend) {
       orders = OrdersFactory;
       http = $httpBackend;
     }));
 
-    it("should define default time and service", function() {
+    it("should have default methods defined", function() {
       expect(orders).toBeDefined();
-      expect(orders.saveOrder).toBeDefined();
+      expect(orders.saveOrder).not.toBeDefined();
     });
   });
 });

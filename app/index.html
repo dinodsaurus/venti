@@ -21,11 +21,15 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body  ng-controller="MainCtrl">
+  <div class="top"></div>
+  <div class="bottom"></div>
+  <div class="left"></div>
+  <div class="right"></div>
   <div class="container">
       <div class="row">
           <div class="header" ng-if="user">
               <div class="welcome col-sm-6">
-                  <a href="#"><img class="logo" src="images/logo-small.png"/></a>
+                  <a href="#"><img class="logo" src="images/unin-logo.png"/></a>
                   <div class="img">
                       <img ng-src="{{user.image.url}}" alt="venti"/>
                       <h3> Pozdrav {{user.displayName}}</h3>

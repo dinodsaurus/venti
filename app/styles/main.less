@@ -2,8 +2,8 @@
 @import "../bower_components/lesshat/build/lesshat.less";
 
 @lightGrey: #888;
-@grey: #464749;
-@yellow: #fff000;
+@grey: #efefef;
+@yellow: #cc0000;
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,8 +49,44 @@ table {
 }
 /*GOTOV RESET POCETAK !!!*/
 body{
-  background:#888;
+  background:white;
   font-family: helvetica,arial;
+}
+.top{
+  position:fixed;
+  left:50%;
+  top:0;
+  margin-left:-42px;
+  width: 84px;
+  height: 57px;
+  background:url("../images/top.png");
+}
+.bottom{
+  position:fixed;
+  left:50%;
+  bottom:0;
+  margin-left:-45px;
+  width: 89px;
+  height: 60px;
+  background:url("../images/bottom.png");
+}
+.left{
+  position:fixed;
+  left:0;
+  top:50%;
+  margin-top:-18px;
+  width: 46px;
+  height: 37px;
+  background:url("../images/left.png");
+}
+.right{
+  position:fixed;
+  right:0;
+  top:50%;
+  margin-top:-13px;
+  width: 43px;
+  height: 27px;
+  background:url("../images/right.png");
 }
 a{
   color:#fff000;
@@ -70,7 +106,7 @@ a:hover{
   img{
     display:block;
     width:50%;
-    margin:0 auto;
+    margin:30px auto 0;
   }
   .login{
     width:181px;
@@ -85,10 +121,11 @@ a:hover{
 }
 .welcome{
   .logo{
-    width:155px;
+    margin-left:-124px;
+    width:400px;
   }
   .img{
-    margin-top:6px;
+    margin-top:36px;
     margin-left:6px;
     img{
       height:38px;
@@ -98,6 +135,7 @@ a:hover{
     }
     h3{
       line-height:38px;
+      color:#666;
     }
   }
 }
@@ -110,17 +148,18 @@ a:hover{
     a{
       float:left;
       padding:10px 5px;
-      .border-radius(5px);
       margin-left:5px;
+      color:@yellow;
+      .border-radius(5px);
       &:focus{
         background:@yellow;
         text-decoration:none;
-        color:black;
+        color:white;
       }
     }
     a:hover{
       display:block;
-      color:black;
+      color:white;
       background:@yellow;
     }
   }
@@ -149,8 +188,10 @@ li{
   .item{
     cursor:pointer;
     .transition(all .2s);
+    color:#666;
     &:hover{
       background:#4C4E50;
+      color:white;
     }
   }
   .row{
@@ -189,7 +230,7 @@ li{
     color:@yellow;
   }
   input{
-    color:@grey;
+    color:#666;
     border:none;
     background:#ccc;
     .border-radius(5px);
@@ -207,7 +248,7 @@ li{
     }
   }
   span{
-    color:white;
+    color:#666;
   }
   ul{
     margin-top:20px;
